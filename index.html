@@ -3,7 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>STAGED | Free media</title>
+  <title>Vol militant à Montréal | STAGED</title>
+
+  <!-- Open Graph / Social preview -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="STAGED">
+  <meta property="og:locale" content="fr_CA">
+  <meta property="og:title" content="Vol militant à Montréal : et si le vrai pillage venait d’en haut ?">
+  <meta property="og:description" content="Quand redistribuer de la nourriture devient un crime, mais que le pillage légal reste invisible.">
+  <meta property="og:url" content="https://staged.tld/articles/vol-militant-2025-12-18.html">
+  <meta property="og:image" content="https://staged.tld/assets/og/vol-noel-staged.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://staged.tld/assets/og/vol-noel-staged.jpg">
 
   <style>
     :root{
@@ -18,21 +32,35 @@
       font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
       background:var(--bg);
       color:var(--text);
-      line-height:1.7;
+      line-height:1.8;
     }
 
-    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      justify-content:center;
+      padding:2rem
+    }
     .card{
-      width:100%;max-width:960px;
+      width:100%;
+      max-width:960px;
       border:1px solid var(--outline);
       border-radius:22px;
       padding:3rem;
-      background:rgba(0,0,0,.7);
+      background:rgba(0,0,0,.75);
       backdrop-filter:blur(8px)
     }
 
-    .top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
-    .brand{letter-spacing:.35em;font-weight:600}
+    .top{
+      display:flex;
+      justify-content:space-between;
+      gap:1rem;
+      flex-wrap:wrap
+    }
+    .brand{
+      letter-spacing:.35em;
+      font-weight:600
+    }
     .pill{
       border:1px solid var(--outline);
       border-radius:999px;
@@ -42,64 +70,61 @@
       color:var(--outline)
     }
 
-    .hero{margin-top:2rem;display:grid;gap:1.25rem}
-    .hero h2{font-size:1.6rem;font-weight:500;letter-spacing:.06em;margin:0}
-    .hero p{color:var(--muted);max-width:760px}
+    header{
+      margin-top:2.5rem;
+      padding-bottom:2rem;
+      border-bottom:1px dashed var(--outline)
+    }
+    header h1{
+      margin:0 0 1rem 0;
+      font-size:1.9rem;
+      font-weight:600;
+      letter-spacing:.04em
+    }
+    header p{
+      max-width:820px;
+      color:var(--muted)
+    }
 
-    .feed{margin-top:2.5rem;display:grid;gap:1rem}
-    .btn{
-      display:flex;justify-content:space-between;gap:1rem;
-      padding:1.1rem 1.4rem;
-      border-radius:14px;
-      border:1px solid var(--outline);
-      text-decoration:none;color:var(--text);
-      transition:.25s
+    article{
+      margin-top:2.5rem;
+      max-width:860px;
+      display:grid;
+      gap:2rem
     }
-    .btn:hover{
-      box-shadow:0 0 28px rgba(212,175,55,.35);
-      transform:translateY(-2px);
-      background:rgba(212,175,55,.04)
-    }
-    .tag{font-size:.7rem;letter-spacing:.25em;color:var(--outline)}
-
-    .principles{
-      margin-top:3rem;padding-top:2rem;
-      border-top:1px dashed var(--outline);
-      display:grid;grid-template-columns:1fr 1fr;gap:1.5rem
-    }
-    .principles h3{
-      margin:0;font-size:.8rem;
-      letter-spacing:.25em;
+    article h2{
+      margin:1.5rem 0 .5rem;
+      font-size:1.15rem;
+      letter-spacing:.08em;
       text-transform:uppercase;
       color:var(--outline)
     }
-    .principles ul{margin:.75rem 0 0;padding-left:1rem;color:var(--muted);font-size:.9rem}
+    article p{
+      font-size:1rem
+    }
+    article ul{
+      margin:.5rem 0 0 1.2rem;
+      color:var(--muted)
+    }
+    article li{
+      margin:.3rem 0
+    }
 
     footer{
-      margin-top:2.5rem;
+      margin-top:3rem;
       text-align:center;
       font-size:.75rem;
       letter-spacing:.15em;
       color:var(--muted)
     }
-
     footer a{
       color:var(--text);
       text-decoration:none;
-      border-bottom:1px solid var(--outline);
+      border-bottom:1px solid var(--outline)
     }
     footer a:hover{
-      color:var(--outline);
+      color:var(--outline)
     }
-
-    .cursor{
-      display:inline-block;width:8px;
-      background:var(--outline);
-      margin-left:6px;
-      animation:blink 1s infinite
-    }
-    @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
-    @media(max-width:900px){.principles{grid-template-columns:1fr}}
   </style>
 </head>
 
@@ -109,67 +134,86 @@
 
   <div class="top">
     <div class="brand">STAGED</div>
-    <div class="pill">SANS PUB · SANS DONNÉES · 100 % GRATUIT</div>
+    <div class="pill">OPINION · INDÉPENDANT · SANS PUB</div>
   </div>
 
-  <section class="hero">
-    <h2 id="typewriter"></h2>
+  <header>
+    <h1>Vol militant à Montréal : et si le vrai pillage venait d’en haut ?</h1>
     <p>
-      <strong>Opinion du public en premier.</strong><br>
-      100 % gratuit. Sans publicité. Aucune monétisation.<br>
-      Les faits sont présentés librement.<br>
-      Aucune opinion éditoriale visant à favoriser des entreprises.
+      L’affaire a été rapidement qualifiée de vol et dénoncée comme une dérive.
+      Mais derrière l’indignation médiatique, une autre question mérite d’être posée :
+      <strong>qui vole réellement qui ?</strong>
     </p>
-  </section>
+  </header>
 
-  <section class="feed">
-    <a class="btn" href="articles/vol-2025-12-15.html">
-      <span>VOL DE 3 000 $ PAR LE PÈRE NOËL ET SES LUTINS.</span>
-      <span class="tag">FAITS</span>
-    </a>
-  </section>
+  <article>
 
-  <section class="principles">
-    <div>
-      <h3>Indépendance & neutralité</h3>
-      <ul>
-        <li>100 % gratuit, sans publicité.</li>
-        <li>Aucun partenariat commercial.</li>
-        <li>Aucune opinion visant à favoriser des entreprises.</li>
-        <li>Refus de contenu promotionnel déguisé.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>STAGED, fait par qui ?</h3>
-      <ul>
-        <li>Créé par <a href="https://www.urus.lol" target="_blank" rel="noopener">URUS</a>, 16 ans.</li>
-        <li>Projet indépendant.</li>
-        <li>Média libre, sans financement corporatif.</li>
-        <li>Publication refusée si l’information est insuffisante.</li>
-      </ul>
-    </div>
-  </section>
+    <h2>Un geste revendiqué, pas caché</h2>
+    <p>
+      Contrairement à un vol classique, l’action a été menée ouvertement et assumée.
+      Les personnes impliquées n’ont rien tenté de dissimuler.
+      Elles n’ont pas agi pour un gain personnel, mais pour poser un geste politique clair.
+    </p>
+    <p>
+      Les denrées n’ont pas été revendues.
+      Elles n’ont pas été conservées.
+      Elles ont été redistribuées gratuitement, immédiatement.
+    </p>
+
+    <h2>Pourquoi une grande chaîne alimentaire</h2>
+    <p>
+      L’épicerie n’a pas été choisie au hasard.
+      Les grandes chaînes contrôlent l’accès à un besoin fondamental tout en annonçant
+      des profits importants, même en période d’inflation.
+    </p>
+    <ul>
+      <li>salaires qui stagnent ;</li>
+      <li>loyers qui explosent ;</li>
+      <li>banques alimentaires saturées.</li>
+    </ul>
+    <p>
+      Cibler une grande entreprise, ce n’est pas attaquer des individus.
+      C’est dénoncer un système où manger dépend du portefeuille.
+    </p>
+
+    <h2>Redistribuer ou criminaliser</h2>
+    <p>
+      Parler de « crime organisé » pour décrire une redistribution de nourriture
+      révèle surtout une indignation sélective.
+      On tolère le pillage légal, mais on condamne sévèrement la solidarité visible.
+    </p>
+
+    <h2>Le vrai malaise</h2>
+    <p>
+      Ce geste dérange parce qu’il rend visible une réalité que l’on préfère ignorer.
+      La pauvreté est acceptable tant qu’elle reste silencieuse.
+      La faim est tolérée tant qu’elle ne dérange pas.
+    </p>
+
+    <h2>Conclusion</h2>
+    <p>
+      La question n’est pas seulement de savoir si une loi a été enfreinte.
+      La vraie question est la suivante :
+    </p>
+    <p>
+      <strong>
+        pourquoi, dans une société d’abondance, faut-il enfreindre la loi
+        pour que certains puissent manger ?
+      </strong>
+    </p>
+    <p>
+      Tant que l’alimentation restera un privilège plutôt qu’un droit réel,
+      des gestes comme celui-ci continueront d’émerger.
+      Non par goût du chaos, mais par solidarité et refus de l’injustice.
+    </p>
+
+  </article>
 
   <footer>
-    par <a href="https://www.urus.lol" target="_blank" rel="noopener">URUS</a>
+    par <a href="https://www.urus.lol" target="_blank" rel="noopener">URUS</a> · STAGED
   </footer>
 
 </main>
 </div>
-
-<script>
-const lines=[
-  "Gratuit. Parce que l’information n’est pas un produit."
-];
-const el=document.getElementById("typewriter");
-let j=0;
-(function type(){
-  if(j<lines[0].length){
-    el.innerHTML=lines[0].slice(0,++j)+'<span class="cursor"></span>';
-    setTimeout(type,55);
-  }
-})();
-</script>
-
 </body>
 </html>
