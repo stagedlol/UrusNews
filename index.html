@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr-CA">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STAGED | Free media</title>
+
+  <style>
+    :root{
+      --bg:#000;
+      --text:#eaeaea;
+      --muted:#b5b5b5;
+      --outline:#d4af37;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+
+    .wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:2rem}
+    .card{
+      width:100%;max-width:960px;
+      border:1px solid var(--outline);
+      border-radius:22px;
+      padding:3rem;
+      background:rgba(0,0,0,.7);
+      backdrop-filter:blur(8px)
+    }
+
+    .top{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+    .brand{letter-spacing:.35em;font-weight:600}
+    .pill{
+      border:1px solid var(--outline);
+      border-radius:999px;
+      padding:.35rem .7rem;
+      font-size:.7rem;
+      letter-spacing:.2em;
+      color:var(--outline)
+    }
+
+    .hero{margin-top:2rem;display:grid;gap:1.25rem}
+    .hero h2{font-size:1.6rem;font-weight:500;letter-spacing:.06em;margin:0}
+    .hero p{color:var(--muted);max-width:760px}
+
+    .feed{margin-top:2.5rem;display:grid;gap:1rem}
+    .btn{
+      display:flex;justify-content:space-between;gap:1rem;
+      padding:1.1rem 1.4rem;
+      border-radius:14px;
+      border:1px solid var(--outline);
+      text-decoration:none;color:var(--text);
+      transition:.25s
+    }
+    .btn:hover{
+      box-shadow:0 0 28px rgba(212,175,55,.35);
+      transform:translateY(-2px);
+      background:rgba(212,175,55,.04)
+    }
+    .tag{font-size:.7rem;letter-spacing:.25em;color:var(--outline)}
+
+    .principles{
+      margin-top:3rem;padding-top:2rem;
+      border-top:1px dashed var(--outline);
+      display:grid;grid-template-columns:1fr 1fr;gap:1.5rem
+    }
+    .principles h3{
+      margin:0;font-size:.8rem;
+      letter-spacing:.25em;
+      text-transform:uppercase;
+      color:var(--outline)
+    }
+    .principles ul{margin:.75rem 0 0;padding-left:1rem;color:var(--muted);font-size:.9rem}
+
+    footer{
+      margin-top:2.5rem;
+      text-align:center;
+      font-size:.75rem;
+      letter-spacing:.15em;
+      color:var(--muted)
+    }
+
+    footer a{
+      color:var(--text);
+      text-decoration:none;
+      border-bottom:1px solid var(--outline);
+    }
+    footer a:hover{
+      color:var(--outline);
+    }
+
+    .cursor{
+      display:inline-block;width:8px;
+      background:var(--outline);
+      margin-left:6px;
+      animation:blink 1s infinite
+    }
+    @keyframes blink{0%,50%{opacity:1}51%,100%{opacity:0}}
+    @media(max-width:900px){.principles{grid-template-columns:1fr}}
+  </style>
+</head>
+
+<body>
+<div class="wrap">
+<main class="card">
+
+  <div class="top">
+    <div class="brand">STAGED</div>
+    <div class="pill">SANS PUB · SANS DONNÉES · 100 % GRATUIT</div>
+  </div>
+
+  <section class="hero">
+    <h2 id="typewriter"></h2>
+    <p>
+      <strong>Opinion du public en premier.</strong><br>
+      100 % gratuit. Sans publicité. Aucune monétisation.<br>
+      Les faits sont présentés librement.<br>
+      Aucune opinion éditoriale visant à favoriser des entreprises.
+    </p>
+  </section>
+
+  <section class="feed">
+    <a class="btn" href="articles/vol-2025-12-18.html">
+      <span>VOL DE 3 000 $ PAR LE PÈRE NOËL ET SES LUTINS.</span>
+      <span class="tag">FAITS</span>
+    </a>
+  </section>
+
+  <section class="principles">
+    <div>
+      <h3>Indépendance & neutralité</h3>
+      <ul>
+        <li>100 % gratuit, sans publicité.</li>
+        <li>Aucun partenariat commercial.</li>
+        <li>Aucune opinion visant à favoriser des entreprises.</li>
+        <li>Refus de contenu promotionnel déguisé.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>STAGED, fait par qui ?</h3>
+      <ul>
+        <li>Créé par <a href="https://www.urus.lol" target="_blank" rel="noopener">URUS</a>, 16 ans.</li>
+        <li>Projet indépendant.</li>
+        <li>Média libre, sans financement corporatif.</li>
+        <li>Publication refusée si l’information est insuffisante.</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    par <a href="https://www.urus.lol" target="_blank" rel="noopener">URUS</a>
+  </footer>
+
+</main>
+</div>
+
+<script>
+const lines=[
+  "Gratuit. Parce que l’information n’est pas un produit."
+];
+const el=document.getElementById("typewriter");
+let j=0;
+(function type(){
+  if(j<lines[0].length){
+    el.innerHTML=lines[0].slice(0,++j)+'<span class="cursor"></span>';
+    setTimeout(type,55);
+  }
+})();
+</script>
+
+</body>
+</html>
